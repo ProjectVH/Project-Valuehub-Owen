@@ -11,15 +11,15 @@ def plotly_graph (stock, score, bar_color):
     fig = go.Figure(go.Indicator(
        domain = {'x': [0, 1], 'y': [0, 1]},
        value = score,
-       mode = "gauge+number+delta",
+       mode = "gauge+number",
        title = {'text': f"Sentiment Score of {stock}"},
        # delta = {'reference': 0},
        gauge = {'axis': {'range': [-1, 1]},
                 'bar': {'color': bar_color},
                 'steps' : [
-                    {'range': [-1, 0], 'color': "cyan"},
-                    {'range': [0, 1], 'color': "blue"}],
-                'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': 0.99}
+                    {'range': [-1, 0], 'color': "lightskyblue"},
+                    {'range': [0, 1], 'color': "cyan"}],
+                'threshold' : {'line': {'color': "darkblue", 'width': 4}, 'thickness': 0.75, 'value': 0.99}
         }
     ))
     return fig
@@ -32,3 +32,4 @@ print(f"The sentiment score is {score}")
 bar_color = bar_color_func(score, color_lst)
 fig = plotly_graph(stock, score, bar_color)
 fig.show()
+
