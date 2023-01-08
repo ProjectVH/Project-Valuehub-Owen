@@ -62,4 +62,17 @@ if function == '新聞分析':
         index_choices = ["港股", "深圳H股", "深圳A股", "國企指數", "恆生科技指數",]
         index = st.sidebar.selectbox("選擇指數", index_choices)
         get_news_sources_INDEX(news_sources, index_choices)
+        
+        
+        #Newslist 
+
+    # rssLinkDict = {
+    #     "yahoo":"https://hk.finance.yahoo.com/news/rssindex",
+    #     "mingpao": "https://news.mingpao.com/rss/pns/s00004.xml",
+    #     "rthk": "http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_cfinance.xml",
+    #     "icable": "https://rsshub.app/icable/all?option=brief",
+    #     # https://rsshub.app/now/news/rank?category=finance
+    #     "Now 新聞(fetch from google)": "https://news.google.com/rss/search?q=site%3Ahttps%3A%2F%2Fnews.now.com%2Fhome%2Ffinance%20when%3A7d&hl=zh-HK&gl=HK&ceid=HK%3Azh-Hant",
+    #     "oncc": "https://rsshub.app/oncc/zh-hant/finance"
+    # }
 
